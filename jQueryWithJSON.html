@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery</title>
+
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <h3>Employee Info:</h3>
+  <div class="container">
+
+  </div>
+
+  <div class="container2">
+
+  </div>
+
+<h2>Site Info:</h2>
+  <div class="container3">
+
+  </div>
+
+  <script>
+
+    
+    var employee = [{
+        "id": "101",
+        "name": "Arif Hossain",
+        "email": "arif@selftics.com"
+      },
+      {
+        "id": "102",
+        "name": "Manik Hossain",
+        "email": "manik@selftics.com"
+      },
+      {
+        "id": "105",
+        "name": "Shahed Uddin",
+        "email": "shahed@selftics.com"
+      }
+    ];
+
+    var mycontent = " ";
+    mycontent += "Emp ID: " + employee[0].id + "<br>";
+    mycontent += "Name: " + employee[0].name + "<br>";
+    mycontent += "Email: " + employee[0].email + "<br> <br>";
+
+    mycontent += "Emp ID: " + employee[1].id + "<br>";
+    mycontent += "Name: " + employee[1].name + "<br>";
+    mycontent += "Email: " + employee[1].email + "<br> <br>";
+
+    mycontent += "Emp ID: " + employee[2].id + "<br>";
+    mycontent += "Name: " + employee[2].name + "<br>";
+    mycontent += "Email: " + employee[2].email + "<br> <br>";
+
+    $(document).ready(function () {
+      $('.container').html(mycontent);  // For all data 
+
+      $('.container2').html("Employee name: " + employee[0].name);
+    });
+
+
+
+var siteinfo = {
+  "site1" : {
+    "name" : "site01",
+    "lat" : 23.04566588,
+    "lng" : 90.01244563,
+    "location" : "Mohakhali, Banani, Dhaka 1213"
+  },
+  "site2" : {
+    "name" : "site02",
+    "lat" : 20.04566588,
+    "lng" : 91.01244563,
+    "location" : "Badda, Rampura, Dhaka 1214"
+  },
+  "site3" : {
+    "name" : "site03",
+    "lat" : 22.04566588,
+    "lng" : 92.01244563,
+    "location" : "Tejgaon, Tajgaon, Dhaka 1210"
+  }
+};
+
+
+var siteContent = " ";
+siteContent += "Site Name: " + siteinfo.site1.name + "<br>";
+siteContent += "Site lat: " + siteinfo.site1.lat + "<br>";
+siteContent += "Site lng: " + siteinfo.site1.lng + "<br>";
+siteContent += "Site location: " + siteinfo.site1.location + "<br> <br>";
+
+siteContent += "Site Name: " + siteinfo.site3.name + "<br>";
+siteContent += "Site lat: " + siteinfo.site3.lat + "<br>";
+siteContent += "Site lnt: " + siteinfo.site3.lng + "<br>";
+siteContent += "Site location: " + siteinfo.site3.location + "<br> <br>";
+
+
+$(document).ready(function(){
+  $('.container3').html(siteContent)
+})
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

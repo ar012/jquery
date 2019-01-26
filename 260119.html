@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery</title>
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+
+
+  <style>
+  
+    .mydiv1{
+      color:rgb(214, 3, 38);
+    }
+
+    .mydiv2 {
+      background: yellowgreen;
+    }
+
+    .contain{
+      font-size: 20px;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn1">ClickMe</button>
+  
+  <div id="demo">
+
+    Welcome <br>
+  </div>
+
+  <div class="goodBy">
+    Every one;
+  </div>
+
+
+
+  <div class="contain">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nulla!</p>
+  </div>
+
+  <div id="div3">
+      <h1 class="jQuery">Using Apend and prepent</h1>
+  </div>
+
+  <div class="demo2">
+    Good By
+  </div>
+
+
+
+ 
+  <script>
+  $(document).ready(function () {
+    $("#demo").append("<h2>To learn jQuery</h2>")
+    // $("#demo").prepend("AR")
+    // $("#demo").append($(".demo2"))
+
+    $("#demo").before($('.jQuery'))
+
+    $('.demo2').after($('.goodBy'))
+
+    $('#demo').addClass('mydiv1 mydiv2')
+
+    // $('.contain').removeClass('contain')
+
+  //  $('#btn1').click(function(){
+  //   $('.contain').toggle('contain')
+  //  })
+
+
+
+  //  $('.demo2').css("background", "yellow")
+   $('.demo2').css({
+     "background":"yellow",
+     "color":"green",
+    //  "fontSize":"50px"
+     "font-size":"50px"
+   });
+
+
+   $('#btn1').click(function(){
+    alert($(document).outerWidth())
+   })
+   
+$('#div3').find("h1").css("color","red");
+
+
+  })
+  
+  </script>
+
+</body>
+</html>

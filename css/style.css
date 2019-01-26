@@ -1,0 +1,31 @@
+.wrap{
+  width: 200px;
+  height: 200px;
+  background: #00ff00;
+  /* display: none; */
+  text-align: center;
+}
+
+.wrap-container{
+  width: 100%;
+  height: 400px;
+}
+
+.learning p{
+  background: orange;
+  width: 250px;
+  padding: 15px;
+  margin: 0px;
+  font-size: 20px;
+  border: 2px solid white;
+}
+
+.learning p a{
+  text-decoration: none;
+
+}
+
+.one:hover{
+  background: red;
+  /* width: 330px; */
+}

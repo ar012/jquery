@@ -1,0 +1,17 @@
+{
+  "name": "self-jquery",
+  "main": "index.js",
+  "homepage": "https://github.com/ar012/jquery",
+  "authors": [
+    "Abdur Razzak <abdur.razzak@ctrends-software.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
