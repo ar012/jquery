@@ -1,56 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>jQuery</title>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
-  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
 
-  <link rel="stylesheet" href="./css/style.css">
+<form action="" class="myform">
+    First name: <input class="firstname" type="text"  placeholder="First Name"><br>
+    Last name: <input class="lastname" type="text"  placeholder="Last Name"><br>
+    <input type="submit" value="Submit">
 
-<script src="./js/jquery-3.3.1.min.js"></script>
+    <h1 class="message"></h1>
+  </form> 
 
-<style>
-  .container{
-    width: 300px;
-    height: 200px; ;
-    background: red;
-    /* display: none; */
-  }
-</style>
+<p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate totam culpa odio repellat nisi doloribus qui voluptate. Quibusdam alias animi commodi perspiciatis tempora illo iure! Quod ducimus molestias deserunt minima? Qui quaerat ad dignissimos excepturi velit illum optio non, rem voluptatum quis? Tempora dolorem perspiciatis iusto provident tempore explicabo dolores asperiores repellat minus voluptate magnam esse in suscipit quos excepturi totam, quia dolorum vero et harum non? Molestias deserunt adipisci enim ducimus consectetur pariatur quos reiciendis ipsam assumenda aperiam in consequuntur dolores, eaque rerum voluptatibus animi minima. Labore quo unde quae deleniti delectus reprehenderit nobis doloremque magni explicabo. Placeat, cumqueexcepturi totam, quia dolorum vero et harum non? Molestias deserunt adipisci enim ducimus consectetur pariatur quos reiciendis ipsam assumenda aperiam in consequuntur dolores, eaque rerum voluptatibus animi minima. Labore quo unde quae deleniti delectus reprehenderit n.</p>
+  <div class="height-width">
+
+  </div>
+<script>
+
+
+
+$(".myform").submit(function(){
+    // alert("Submitted");
+    var firstname = $('.firstname').val();
+    var lastname = $('.lastname').val();
+    if(firstname == "" || lastname == ""){
+      $('.message').html('First name and Last Name are required')
+    } 
+    else {
+    $('.message').html('Your form submitted.')
+    }
+    return false;
+  });
+
+
+$('.firstname').focus(function(){
+  $(this).after('<p class="hide">Pleaser write your name<p>');
+});
+
+
+$('.firstname').blur(function(){
+  $('.hide').hide();
+});
+
+
+
+// $('.firstname').mouseover(function(){
+//   $(this).after('<p class="hide">Pleaser write your name<p>');
+// });
+
+
+// $('.firstname').mouseleave(function(){
+//   $('.hide').hide();
+// });
+
+
+var bodyHeight = $('.lorem').width();
+$('.height-width').html(bodyHeight)
+
+</script>
 </head>
 <body>
 
-<h1></h1>
-<h2></h2>
 
 
-
-
-<button class="hide">hide</button>
-
-<button class="toggle">toggle</button>
-
-<div class="container">
-  Hello
-</div>
-
-
-<script>
-
-$('.toggle'). click(function(){
-  $('.container').fadeToggle(2000);
-})
-
-
-$('.container').append('<h1>selftics</h1>')
-
-</script>
-
-
-
-<script src="./js/index3.js"></script>
 </body>
 </html>
